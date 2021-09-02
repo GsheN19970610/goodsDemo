@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d5c168fc-190f-4033-b6ff-4fd77c5f5192" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1xa83KwPGzOiiWANlSMsTXHD23H" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mrp_controller/src/main/java/com/aty" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\idea\ideaWorkSpace\layuiDemoSpringboot0902\mrp_controller\src\main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\idea\ideaWorkSpace\layuiDemoSpringboot0902\mrp_controller\src\main\java\com\aty" />
+      <recent name="D:\idea\ideaWorkSpace\layuiDemoSpringboot0902\mrp_controller\src\main\webapp\static" />
+      <recent name="D:\idea\ideaWorkSpace\layuiDemoSpringboot0902\mrp_ooo\src\main\webapp\static" />
+      <recent name="D:\idea\ideaWorkSpace\layuiDemoSpringboot0902\mrp_controller\src\main\resources" />
+      <recent name="D:\idea\ideaWorkSpace\layuiDemoSpringboot0902\mrp_ooo\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MrpControllerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mrp_controller" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aty.MrpControllerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5c168fc-190f-4033-b6ff-4fd77c5f5192" name="Default Changelist" comment="" />
+      <created>1630581638407</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630581638407</updated>
+      <workItem from="1630581643239" duration="155000" />
+      <workItem from="1630581809876" duration="2417000" />
+      <workItem from="1630584332750" duration="953000" />
+      <workItem from="1630585551073" duration="204000" />
+      <workItem from="1630585825116" duration="1632000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="432" y="14" key="#MrpControllerApplication" timestamp="1630585716157">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="432" y="14" key="#MrpControllerApplication/0.0.1536.824@0.0.1536.824" timestamp="1630585716157" />
+    <state x="432" y="14" key="#MrpOooApplication" timestamp="1630584959498">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="432" y="14" key="#MrpOooApplication/0.0.1536.824@0.0.1536.824" timestamp="1630584959498" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1630585835901">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1630585835901" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1630585707995">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1630585707995" />
+    <state x="400" y="103" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1630581715517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="400" y="103" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.824@0.0.1536.824" timestamp="1630581715517" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1630582915515">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1630582915515" />
+    <state width="1497" height="346" key="GridCell.Tab.0.bottom" timestamp="1630587320727">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="346" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630587320727" />
+    <state width="1497" height="346" key="GridCell.Tab.0.center" timestamp="1630587320726">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="346" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1630587320726" />
+    <state width="1497" height="346" key="GridCell.Tab.0.left" timestamp="1630587320726">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="346" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1630587320726" />
+    <state width="1497" height="346" key="GridCell.Tab.0.right" timestamp="1630587320727">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="346" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1630587320727" />
+    <state width="1497" height="346" key="GridCell.Tab.1.bottom" timestamp="1630587320727">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="346" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1630587320727" />
+    <state width="1497" height="346" key="GridCell.Tab.1.center" timestamp="1630587320727">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="346" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1630587320727" />
+    <state width="1497" height="346" key="GridCell.Tab.1.left" timestamp="1630587320727">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="346" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1630587320727" />
+    <state width="1497" height="346" key="GridCell.Tab.1.right" timestamp="1630587320727">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="346" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1630587320727" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1630585855316">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1630585855316" />
+    <state x="218" y="74" key="new project wizard" timestamp="1630585050910">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="218" y="74" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1630585050910" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1630587448887">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1630587448887" />
+  </component>
+</project>

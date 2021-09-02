@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aty.dao.OperationDao">
+    <!-- 查找所有操作 -->
+    <resultMap id="operationDaoResultMap" type="com.aty.domain.Operation">
+        <id property="id" column="id"></id>
+        <result property="userId" column="user_id"></result>
+        <result property="goodName" column="good_name"></result>
+        <result property="operationType" column="operation_type"></result>
+        <result property="operationNum" column="operation_num"></result>
+        <result property="operationTime" column="operation_time"></result>
+        <association property="user" javaType="com.aty.domain.User">
+            <id property="id" column="id"></id>
+            <result property="name" column="name"></result>
+        </association>
+    </resultMap>
+    <select id="listAll" resultMap="operationDaoResultMap">
+         select *
+         from t_operation
+            join t_user on t_user.id=t_operation.user_id
+    </select>
+    <!-- 添加商品类型-->
+    <insert id="insert">
+     insert into t_operation(user_id,good_name,operation_type,operation_num,operation_time)
+     values
+      (#{userId},#{goodName},#{operationType},#{operationNum},#{operationTime})
+    </insert>
+<!--        通过名字查找操作-->
+    <select id="queryByName" resultType="Operation">
+     select * from t_operation
+      <where>
+          <if test="goodName != null and goodName != ''">
+              good_name like CONCAT('%',#{goodName},'%')
+          </if>
+      </where>
+
+    </select>
+</mapper>

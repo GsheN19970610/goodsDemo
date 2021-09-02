@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mrp_controller" />
+        <module name="mrp_pojo" />
+        <module name="mrp_dao" />
+        <module name="mrp_service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="layuiDemoSpringboot0902" target="1.8" />
+      <module name="mrp_controller" target="1.8" />
+      <module name="mrp_dao" target="1.8" />
+      <module name="mrp_pojo" target="1.8" />
+      <module name="mrp_service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mrp_controller" options="-parameters" />
+    </option>
+  </component>
+</project>

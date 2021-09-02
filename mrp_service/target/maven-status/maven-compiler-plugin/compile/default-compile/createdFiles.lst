@@ -1,0 +1,10 @@
+com\aty\service\OperationService.class
+com\aty\service\MenuService.class
+com\aty\service\impl\MenuServiceImpl.class
+com\aty\service\GoodTypeService.class
+com\aty\service\GoodsService.class
+com\aty\service\impl\GoodsServiceImpl.class
+com\aty\service\impl\GoodTypeServiceImpl.class
+com\aty\service\impl\UserServiceImpl.class
+com\aty\service\impl\OperationServiceImpl.class
+com\aty\service\UserService.class

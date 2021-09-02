@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aty.dao.GoodDao">
+    <!-- 查找所有商品类型 -->
+    <select id="listAll" resultType="GoodType">
+    select type_id as typeId,type_name as typeName,type_info as typeInfo from t_good_type where is_delete = 0
+  </select>
+
+    <!-- 添加商品类型-->
+    <insert id="insert">
+     insert into t_good_type(type_name,type_info) values (#{typeName},#{typeInfo})
+    </insert>
+    <!-- 删除商品类型 -->
+    <update id="deleteById">
+    update t_good_type set is_delete = 1 where type_id= #{id}
+  </update>
+
+    <!-- 更新商品类型 -->
+    <update id="update">
+        update t_good_type
+        <set>
+            <if test="typeName !=null">
+                type_name = #{typeName},
+            </if>
+            <if test="typeInfo !=null">
+                type_info = #{typeInfo},
+            </if>
+
+        </set>
+        where type_id = #{typeId}
+    </update>
+
+    <!-- 根据id查找商品类型 -->
+    <select id="getById" resultType="GoodType">
+    select * from t_good_type where type_id = #{id}
+  </select>
+
+<!--        通过名字查找商品类型-->
+    <select id="queryByName" resultType="GoodType">
+     select type_id as typeId,type_name as typeName,type_info as typeInfo from t_good_type
+      <where>
+          <if test="typeName != null and typeName != ''">
+              type_name like CONCAT('%',#{typeName},'%')
+          </if>
+      </where>
+
+    </select>
+
+
+</mapper>

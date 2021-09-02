@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aty.dao.MenuDao">
+        <select id="showMenu" parameterType="integer" resultType="Menu">
+                SELECT
+                m.menu_id AS menuId,m.menu_name AS menuName,m.menu_url AS menuUrl
+                FROM
+                t_user n
+                JOIN
+                 t_menu m
+                 ON
+                m.admin_id = #{isAdmin}
+	            GROUP BY m.menu_id
+        </select>
+</mapper>

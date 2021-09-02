@@ -1,0 +1,5 @@
+com\aty\dao\UserDao.class
+com\aty\dao\GoodsDao.class
+com\aty\dao\GoodDao.class
+com\aty\dao\MenuDao.class
+com\aty\dao\OperationDao.class

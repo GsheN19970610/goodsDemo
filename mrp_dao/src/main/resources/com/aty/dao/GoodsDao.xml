@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aty.dao.GoodsDao">
+    <!-- 查找所有商品 -->
+    <resultMap id="GoodsResultMap" type="com.aty.domain.Goods">
+            <id property="goodId" column="goodId"></id>
+            <result property="goodName" column="goodName"></result>
+            <result property="goodPrice" column="goodPrice"></result>
+            <result property="goodNum" column="goodNum"></result>
+            <result property="goodType" column="goodType"></result>
+            <result property="userId" column="userId"></result>
+            <result property="goodInfo" column="goodInfo"></result>
+        <association property="goodTypes" javaType="com.aty.domain.GoodType">
+            <id property="typeId" column="type_id"></id>
+            <result property="typeName" column="typeName"></result>
+            <result property="typeInfo" column="type_info"></result>
+        </association>
+        <association property="user" javaType="com.aty.domain.User">
+            <id property="id" column="id"></id>
+            <result property="name" column="name"></result>
+            <result property="isAdmin" column="is_admin"></result>
+        </association>
+    </resultMap>
+    <select id="listAll" resultMap="GoodsResultMap">
+    SELECT
+    good_id AS goodId,t_user.name AS name,t_good_type.type_id,t_good_type.type_info,t_user.name,t_user.is_admin,
+    good_name AS goodName,good_price AS goodPrice,good_num AS goodNum ,good_type AS goodType,user_id AS userId,good_info AS goodInfo,t_good_type.type_name AS typeName
+    FROM (t_good JOIN t_user ON t_user.id = t_good.user_id) INNER JOIN t_good_type ON t_good.good_type = t_good_type.type_id where t_good.is_delete = 0 order by t_good.good_id
+  </select>
+
+    <!-- 添加商品 -->
+    <insert id="insert">
+     insert into
+     t_good(good_name,good_price,good_num,good_type,user_id,good_info)
+     values (#{goodName},#{goodPrice},#{goodNum},#{goodType},#{userId},#{goodInfo})
+    </insert>
+    <!-- 删除商品 -->
+    <update id="deleteById">
+         update t_good set is_delete = 1 where good_id= #{id}
+  </update>
+
+    <!-- 更新商品 -->
+    <update id="update">
+        update t_good
+        set  good_num = good_num-#{goodNum}
+        where good_id = #{goodId}
+    </update>
+
+    <!-- 根据id查找商品 -->
+    <select id="getById" resultType="Goods">
+    select * from t_good where good_id = #{id}
+  </select>
+<!--    通过名字查找商品-->
+    <select id="queryByName" resultMap="GoodsResultMap">
+        SELECT
+        good_id AS goodId,t_user.name AS name,t_good_type.type_id,t_good_type.type_info,t_user.name,t_user.is_admin,
+        good_name AS goodName,good_price AS goodPrice,good_num AS goodNum ,good_type AS goodType,user_id AS userId,good_info AS goodInfo,t_good_type.type_name AS typeName
+        FROM (t_good JOIN t_user ON t_user.id = t_good.user_id) INNER JOIN t_good_type ON t_good.good_type = t_good_type.type_id and t_good.is_delete = 0
+        <where>
+            <if test="goodName != null and goodName != ''">
+                t_good.good_name like CONCAT('%',#{goodName},'%') and is_delete = 0
+            </if>
+        </where>
+        order by t_good.good_id
+    </select>
+
+    <!--    通过名字查找商品-->
+    <select id="queryByPrice" resultMap="GoodsResultMap">
+        SELECT
+        good_id AS goodId,t_user.name AS name,t_good_type.type_id,t_good_type.type_info,t_user.name,t_user.is_admin,
+        good_name AS goodName,good_price AS goodPrice,good_num AS goodNum ,good_type AS goodType,user_id AS userId,good_info AS goodInfo,t_good_type.type_name AS typeName
+        FROM (t_good JOIN t_user ON t_user.id = t_good.user_id) INNER JOIN t_good_type ON t_good.good_type = t_good_type.type_id and t_good.is_delete = 0
+        <where>
+            t_good.good_price
+            <if test="priceStart != null and priceStart != ''">
+               between  #{priceStart}
+--                t_good.good_price >
+            </if>
+            <if test="priceEnd != null and priceEnd != ''">
+               and  #{priceEnd}
+--                 t_good.good_price &lt;
+            </if>
+<!--            <if test="priceStart == null || priceStart != '' ">-->
+<!--                t_good.good_price > priceStart-->
+<!--            </if>-->
+<!--            <if test="priceEnd == null || priceEnd == ''">-->
+<!--                t_good.good_price &lt; priceEnd-->
+<!--            </if>-->
+
+        </where>
+        order by t_good.good_id
+    </select>
+
+    <!-- 根据id查找商品 -->
+    <select id="getByTypeId" resultMap="GoodsResultMap">
+        SELECT
+        good_id AS goodId,t_user.name AS name,t_good_type.type_id,t_good_type.type_info,t_user.name,t_user.is_admin,
+        good_name AS goodName,good_price AS goodPrice,good_num AS goodNum ,good_type AS goodType,user_id AS userId,good_info AS goodInfo,t_good_type.type_name AS typeName
+        FROM (t_good JOIN t_user ON t_user.id = t_good.user_id) INNER JOIN t_good_type ON t_good.good_type = t_good_type.type_id and t_good.is_delete = 0
+        <where>
+            <if test="id != null and id != ''">
+                good_type = #{id}
+            </if>
+        </where>
+        order by t_good.good_id
+    </select>
+
+    <!-- 更新入库商品 -->
+    <update id="addGoodsNums">
+        update t_good
+        set  good_num = good_num + #{goodNum}
+        where good_id = #{goodId}
+    </update>
+
+    <!-- 更新商品 -->
+    <update id="updateGoods">
+        update t_good
+        <set>
+            <if test="goodName != null and goodName !='' ">
+                good_name = #{goodName},
+            </if>
+            <if test="goodPrice != null and goodPrice !='' ">
+                good_price = #{goodPrice},
+            </if>
+            <if test="goodInfo != null and goodInfo !='' ">
+                good_info = #{goodInfo},
+            </if>
+        </set>
+        where good_id = #{goodId}
+    </update>
+</mapper>
